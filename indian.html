@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppeteer Content Extractor</title>
+</head>
+<body>
+
+<h1 class="t-elecblock-heading"><a href="#">Content Inside H1</a></h1>
+
+<div class="t-elecblock-right">
+    <p><a href="#">Content Inside Div</a></p>
+</div>
+
+<script>
+    async function getContent(url) {
+        const puppeteer = require('puppeteer');
+        const browser = await puppeteer.launch();
+        const page = await browser.newPage();
+        await page.goto(url);
+
+        // Extract content inside <a> tag within <h1> tag
+        const contentInH1 = await page.evaluate(() => {
+            const h1Element = document.querySelector('h1.t-elecblock-heading');
+            const aElement = h1Element.querySelector('a');
+            return aElement ? aElement.textContent.trim() : null;
+        });
+
+        // Extract content inside <a> tag within <div> with class 't-elecblock-right'
+        const contentInDiv = await page.evaluate(() => {
+            const divElement = document.querySelector('div.t-elecblock-right');
+            const aElement = divElement.querySelector('p a');
+            return aElement ? aElement.textContent.trim() : null;
+        });
+
+        await browser.close();
+
+        return { contentInH1, contentInDiv };
+    }
+
+    // Example usage
+    const url = 'https://indianexpress.com/'; // Replace with the actual URL
+    getContent(url)
+        .then(result => {
+            console.log(`Content inside <a> tag in h1: ${result.contentInH1}`);
+            console.log(`Content inside <a> tag in div: ${result.contentInDiv}`);
+        })
+        .catch(error => console.error(error));
+</script>
+
+</body>
+</html>

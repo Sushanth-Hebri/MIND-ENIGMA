@@ -1,0 +1,20 @@
+/* style.css */
+.page-transition {
+	transition: transform 5s ease-in-out;
+}
+
+.page-enter {
+	transform: translateX(100%);
+}
+
+.page-enter-active {
+	transform: translateX(0);
+}
+
+.page-exit {
+	transform: translateX(0);
+}
+
+.page-exit-active {
+	transform: translateX(-100%);
+}

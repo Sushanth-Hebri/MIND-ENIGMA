@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIND ENIGMA</title>
+    <link rel="icon" type="image/jpg" href="bulb.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <script src="pagetransition.js"></script>
+    <link rel="stylesheet" href="pagetransitioncss.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Dela+Gothic+One&family=EB+Garamond:ital,wght@1,500&family=Exo+2:wght@500&family=Lora&family=Mukta&family=Orbitron:wght@700&family=Pacifico&family=Philosopher:wght@700&family=Playfair:wght@600&family=Poppins&family=Roboto&family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+
+
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya:wght@400;500&family=Castoro+Titling&family=Domine:wght@500&family=Libre+Baskerville:ital@0;1&family=Prompt:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&display=swap');
+
+        body {
+            background-color: black;
+            margin-left: 10px;
+            margin-right: 10px;
+            margin: 0;
+  padding: 0;
+
+        }
+
+
+        .img-fluid {
+            position: relative;
+           
+            width: 100%;
+            height: 100%;
+            filter: blur(8);
+        }
+
+        .navbar li {
+            font-size: 20px;
+            padding: 10px;
+            padding-left: 50px;
+            border-radius: 50px;
+
+
+        }
+
+        .navbar a {
+            color: white !important;
+        }
+
+        hr {
+            border-top: 1px solid rgb(100, 95, 95);
+            margin: 19px;
+        }
+
+
+
+        .act {
+            color: #575656 !important;
+            border-radius: 50px;
+        }
+
+        p {
+            font-size: 40px;
+        }
+
+        #underline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: rgb(240, 230, 230);
+            transition: width 0.9s ease;
+        }
+
+        #myHeading {
+            /* margin-right:1030px; */
+            color: white !important;
+            font-family: 'Castoro Titling', cursive;
+            font-family: 'Castoro Titling', cursive;
+        }
+
+        #myHeading.underline-visible+#underline {
+            width: 200px;
+
+        }
+        #myHeading:hover{
+            cursor:pointer;
+           
+        }
+
+        header h1 {
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            width: 200px;
+        }
+
+        .light-out {
+            height:3rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .greet{
+            height: 100%;
+            width: 30%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-family: 'Kalnia', serif;
+        }
+
+       
+
+        /* .act:hover{
+            background-color: rgb(96, 107, 116);
+            cursor: pointer !important;;
+        } */
+        /* .navbar, .navbar-item {
+  cursor: pointer !important;
+} */
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: rgb(53, 51, 51);
+            cursor: pointer !important;
+            border-radius: 50px;
+        }
+
+        * {
+            border: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar-fixed-top {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: top 0.5s ease-in-out;
+        }
+
+        .navbar-fixed-top.hidden {
+            top: -100px;
+        }
+
+        .navbar.fixed-top.show {
+            top: 0;
+        }
+
+        .container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .card-wrapper {
+            white-space: nowrap;
+        }
+
+        .container::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            background-color: transparent;
+        }
+
+        .card {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin-right: 10px;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 200px;
+            font-size: 20px;
+        }
+
+        .card:hover {
+            cursor: pointer;
+
+        }
+
+        .card-image {
+            height: 198px;
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            position: relative;
+        }
+
+        .card-image:hover {
+            opacity: 0.9;
+        }
+
+        .card-heading {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Add a semi-transparent background to the heading */
+        }
+
+        .homecot {
+            width: 80%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            font-size: 26px;
+            line-height: 2;
+            color: rgb(120, 119, 119) !important;
+        }
+
+        ::selection {
+            background-color: white;
+            color: black;
+        }
+
+        footer {
+            background-color: rgb(44, 43, 43);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+            width: 100% !important;
+
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .footer-links li:first-child {
+            margin-left: 0;
+        }
+
+        .footer-links li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .copy {
+            font-size: 18px;
+        }
+
+        .footer-content {
+            justify-content: center;
+        }
+
+        .quiz {
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* .contentboxmain{
+    width:100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+} */
+        /* .contentbox {
+            width: 1300px;
+        } */
+
+        .socio {
+            display: flex;
+            width: auto;
+            margin-left: 100px;
+        }
+
+        .socioplatform {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+.socioplatform:hover{
+    cursor: pointer;
+}
+        .socioplatform img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            display: none;
+           
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        .scroll-to-top:hover {
+            background-color: #706969;
+        }
+
+        .scroll-to-top.show {
+            display: block;
+        }
+        .arrow:hover{
+            color:rgb(72, 0, 255);
+        }
+        .share{
+            font-size:18px;
+        }
+        
+.descri{
+    font-size: 15px;
+    color:rgb(146, 144, 144);
+    width:400px;
+}
+.auth{
+    font-size: 23px;
+    color:rgb(146, 144, 144);
+}
+.bookname{
+    font-size:37px;
+    color:white;
+}
+.book-section {
+    width:60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+.book {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-left:100px;
+}
+
+.book img {
+  width: 150px;
+  margin-right: 20px;
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-info h2 {
+ 
+  margin-top: 0;
+}
+
+.book-info p {
+  margin: 0;
+}
+.bookstoread{
+    color:rgb(135, 132, 132);
+    margin-left: 100px;
+    padding-bottom: 20px;
+}
+
+.iq{
+    font-size: 28px;
+    padding: 10px;
+}
+.iq:hover{
+    cursor:pointer;
+    color:green;
+}.disclaimer-container {
+  position: relative;
+  display: inline-block;
+}
+
+.disclaimer-text {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  background-color: #343333;
+  width: 0;
+  height: 50px;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+display: none;
+word-wrap: break-word;
+  overflow: hidden;
+  transition: width 0.2s ease-out;
+  opacity:0.4;
+}
+
+.fa-info-circle {
+  margin-left: 5px;
+}
+
+.fa-info-circle:hover + .disclaimer-text {
+  width: 1000px;
+  display: block;
+  transition: width 0.5s ease-in-out;
+}
+
+.desclai{
+    font-size:10px;
+    line-height: 1.5;
+    color:white;
+}
+.activ{
+    background-color: #575656;
+    border-radius: 50px;
+}
+
+
+.blogseriesout{
+    height:400px;
+    width:1400px;
+    background-color: red;
+    margin:0 auto;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: row;
+    
+}
+.blogseriesname{
+    height:400px;
+    background-color: rgb(15, 18, 15);
+    width:1000px;
+    text-align: center;
+    padding:10px;
+    
+}
+.blogseriesthumb{
+    height:400px;
+    background-color: rgb(23, 23, 36);
+    width:400px;
+    cursor: pointer;
+}
+.thumb{
+    height:300px;
+    width:300px;
+    background-color: yellow;
+    margin:0 auto;
+    margin-top:50px;
+    object-fit: cover;
+}
+.thumb img{
+    height:100%;
+    width:100%;
+}
+.thumb img:hover{
+    box-shadow:4px 4px 8px 8px rgba(239, 239, 121, 0.844);
+}
+.cat{
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 80px;
+    color:rgb(225, 77, 77);
+}
+.m{
+    font-size: 30px; 
+    color:rgba(207, 204, 204, 0.762);
+}
+.title{
+    font-size: 90px;  
+    color:orange; 
+}
+.author{
+text-align: center;
+font-size: 30px;
+color:white;
+font-family: 'EB Garamond', serif;
+}
+.bookleft{
+    display: flex;
+    width:100%;
+}
+.topictoread{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+width:40%;
+/* background-color: pink; */
+
+}
+.theme{
+  
+    width: 100%;
+ height: 600px;
+ /* background-color: red; */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.themein{
+    display: flex;
+ justify-content: center;
+ align-items: center;
+width: 70%;
+height: 100%;
+/* background-color: pink; */
+}
+.themein2{
+width: 90%;
+height: 70%;
+padding: 5px;
+border-radius: 2%;
+object-fit: contain;
+box-shadow: 1px 1px 30px 2px rgb(255, 250, 98);
+display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.themeinin{
+    display: flex;
+ justify-content: center;
+ align-items: center;
+width: 70%;
+height: 100%;
+/* background-color: pink; */
+}
+.themein22{
+width: 90%;
+height: 70%;
+padding: 5px;
+border-radius: 2%;
+object-fit: contain;
+box-shadow: 1px 1px 30px 2px rgb(108, 255, 98);
+}
+
+
+
+
+
+
+
+.empty{
+    height:100px;
+    width: 100%;
+}
+.topichead{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.topictitle{
+    color:rgb(135, 132, 132);
+    margin-bottom: 20px;
+}
+.topic1{
+    display: flex;
+    /* background-color: red; */
+    width:70%;
+    height: 10%;
+    cursor: pointer;
+}
+.topic1l img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5%;
+}
+.topic1l{
+    object-fit: cover;
+    height: 100%;
+    width: 30%;
+    /* background-color: blue; */
+    
+}
+
+.topic1r{
+    padding: 5px;
+    font-size: 18px;
+    font-style: bold;
+    color: white;
+    height: 100%;
+    width: 70%;
+    /* background-color: rgb(255, 0, 230); */
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.link{
+    transition: 0.2s ease-in-out;
+}
+
+
+
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(7, 0, 0); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color:white;
+    transition: 0.3s ease-out ;
+}
+/* .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.3);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+} */
+
+.spinner {
+  width: 35px;
+  height: 80px;
+  position: relative;
+}
+.spinner:after {
+  content: "";
+  position: absolute;
+  inset: 0 0 20px;
+  border-radius: 15px 15px 10px 10px;
+  padding: 1px;
+  background: repeating-linear-gradient(-45deg,#91d2e2 0 8px,#1296a7 0 12px) content-box;
+  --c: radial-gradient(farthest-side,#000 94%,#0000);
+  -webkit-mask:
+    linear-gradient(#0000 0 0),
+    var(--c) -10px -10px,
+    var(--c)  15px -14px,
+    var(--c)   9px -6px,
+    var(--c) -12px  9px,
+    var(--c)  14px  9px,
+    var(--c)  23px 27px,
+    var(--c)  -8px 35px,
+    var(--c)   50% 50%,
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0),
+    var(--c) -10px -10px,
+    var(--c)  15px -14px,
+    var(--c)   9px -6px,
+    var(--c) -12px  9px,
+    var(--c)  14px  9px,
+    var(--c)  23px 27px,
+    var(--c)  -8px 35px,
+    var(--c)   50% 50%,
+    linear-gradient(#0000 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude,add,add,add,add,add,add,add,add;
+  -webkit-mask-repeat: no-repeat;
+  animation: l2 3s infinite;
+}
+.spinner:before {
+  content: "";
+  position: absolute;
+  inset: 50% calc(50% - 4px) 0;
+  background: #e0a267;
+  border-radius: 50px;
+}
+@keyframes l2 {
+ 0%   {-webkit-mask-size: auto,0 0,0 0,0 0,0 0,0 0,0 0,0 0,0 0}
+ 10%  {-webkit-mask-size: auto,25px 25px,0 0,0 0,0 0,0 0,0 0,0 0,0 0}
+ 20%  {-webkit-mask-size: auto,25px 25px,25px 25px,0 0,0 0,0 0,0 0,0 0,0 0}
+ 30%  {-webkit-mask-size: auto,25px 25px,25px 25px,30px 30px,0 0,0 0,0 0,0 0,0 0}
+ 40%  {-webkit-mask-size: auto,25px 25px,25px 25px,30px 30px,30px 30px,0 0,0 0,0 0,0 0}
+ 50%  {-webkit-mask-size: auto,25px 25px,25px 25px,30px 30px,30px 30px,25px 25px,0 0,0 0,0 0}
+ 60%  {-webkit-mask-size: auto,25px 25px,25px 25px,30px 30px,30px 30px,25px 25px,25px 25px,0 0,0 0}
+ 70%  {-webkit-mask-size: auto,25px 25px,25px 25px,30px 30px,30px 30px,25px 25px,25px 25px,25px 25px,0 0}
+ 80%,
+ 100% {-webkit-mask-size: auto,25px 25px,25px 25px,30px 30px,30px 30px,25px 25px,25px 25px,25px 25px,200% 200%}
+}
+
+
+.quote{
+    height: 200px;
+    width: 400px;
+    background-color: blue;
+    margin-bottom: 20px;
+}
+
+.load-imag{
+    border-radius: 20px;
+   
+}
+
+.loading-extra{
+    color: rgb(142, 141, 141);
+    font-size: 25px;
+}
+
+.visited{
+    height: 100px;
+    width: 100px;
+    background-color: #91d2e2;
+    color: black;
+    margin-top: 50%;
+    margin-left: 50%;
+}
+
+.dailyquote{
+    height: 10rem;
+    width: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dailyfloat{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(160, 158, 158);
+}
+    </style>
+</head>
+
+<body>
+    <div id="loader">
+         <h6>MIND ENIGMA</h6>  <br>
+        <img src="https://picsum.photos/200" alt="no image" class="load-imag">
+        <div class="spinner"></div>
+        <p class="loading-extra">Loading images for you..</p>
+    </div>
+   
+
+<nav class="navbar navbar-expand-lg   navbar-fixed-top">
+        <div class="container-fluid">
+            <h1 id="myHeading">MIND ENIGMA</h1>
+            <div id="underline"></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link activ " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " id="next-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <!-- <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign up</a>
+                    </li>
+                </ul> -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="empty"></div>
+
+    <!-- Image -->
+    <div class="theme">
+         <div class="themein">
+            <div class="themein2">
+ MIND
+                <div class="themeinin">
+                    <div class="themein22">
+                        <img class="img-fluid" src="theme.jpg" alt="theme">
+                    </div>
+                </div>
+
+ENIGMA
+
+
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="light-out">
+       <div class="greet">
+        
+       </div>
+    </div>
+
+
+    <br><br>
+    <div class="container">
+        <div class="card-wrapper">
+           <a href="genres\psychology-tricks\psychology-tricks-genre.html" class="link"> <div class="card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1572113394679-f98d243df693?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+                    <h2 class="card-heading">Psychology tricks</h2>
+                </div>
+            </div>
+           </a>
+            <div class="card">
+                <div class="card-image" style="background-image: url('theme.jpg')">
+                    <h2 class="card-heading">Mental Health</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('personaldevelopment.jpg')">
+                    <h2 class="card-heading">Personal development</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('relationship.png')">
+                    <h2 class="card-heading">Relationships</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('theme.jpg')">
+                    <h2 class="card-heading">Mindfulness</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('neuroscience.webp')">
+                    <h2 class="card-heading">Neuroscience</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('therepy.jpg')">
+                    <h2 class="card-heading">Therapy</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('cultureandpsychology.jpg')">
+                    <h2 class="card-heading">Culture psychology</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background-image: url('theme.jpg')">
+                    <h2 class="card-heading">Card 8 Heading</h2>
+                </div>
+            </div>
+
+
+
+            <!-- Add more cards here -->
+        </div>
+    </div>
+
+
+    <br><br>
+
+    <hr>
+    <br>
+
+
+
+<div class="blogseriesout">
+    <div class="blogseriesname">
+<h1 class="cat">Catch Out</h1> <br>
+<h2 class="m">New Blog Series</h2>
+<h1 class="title">"WHAT MAKES YOU DISCIPLINE ?"</h1>
+    </div>
+    <div class="blogseriesthumb">
+<div class="thumb">
+<img src="discipline.jpg" alt="discipline">
+</div>
+<p class="author">Author - Sushanth</p>
+    </div>
+
+</div>
+
+<br> <br>
+
+
+
+
+
+    <div class="contentboxmain content"></div>
+   
+</body>
+<br><br><br>
+
+<div class="quiz">
+    <div class="homecot">
+        <b class="iq"> MIND ENIGMA</b> is a psychology and wellness blog that aims to provide insightful and informative content to
+        help readers improve their mental health and overall well-being. The blog covers a wide range of topics related
+        to psychology, including anxiety, depression, stress management, self-care, and personal growth. With a focus on
+        clarity and practicality, MIND ENIGMA offers evidence-based tips and advice that readers can apply to their daily
+        lives. Whether you're looking for strategies to manage your stress or seeking ways to enhance your
+        relationships, MIND ENIGMA has something for everyone. Join the MIND ENIGMA community today and discover a wealth of
+        resources to help you live a happier, healthier life.
+    </div>
+</div>
+
+
+
+
+<br><br><br><br>
+<div class="bookleft">
+<div class="book-section">
+    <h1 class="bookstoread">Books to read</h1>
+    <div class="book">
+      <img src="atomichabit.jpg" alt="Book 1">
+      <div class="book-info">
+        <h1 class="bookname">Atomic Habits</h1>
+        <p class="auth">Author :James Clear</p>
+        <p class="descri">This book is all about forming good habits and breaking bad ones. It's a great read for anyone looking to improve themselves and their daily routines.</p>
+      </div>
+    </div>
+    
+    <div class="book">
+      <img src="thinkingfastandslow.webp" alt="Book 2">
+      <div class="book-info">
+        <h2 class="bookname">Thinking, Fast and Slow</h2>
+        <p class="auth">Author:Daniel Kahneman</p>
+        <p class="descri">This book dives into the way we think and make decisions, exploring the difference between our fast, intuitive thinking and our slower, more deliberate thinking. It's a fascinating read for anyone interested in psychology and decision-making.</p>
+      </div>
+    </div>
+    
+    <div class="book">
+        <img src="thealchemist.webp" alt="Book 2">
+        <div class="book-info">
+          <h2 class="bookname">The Alchemist</h2>
+          <p class="auth">Author:Paulo Coelho</p>
+          <p class="descri">This classic book is a must-read for anyone looking for inspiration and a reminder to follow their dreams. It's a beautifully written story that encourages readers to pursue their passions.</p>
+        </div>
+      </div>
+      
+  
+</div>
+<div class="topictoread">
+    <div class="topichead">
+        <h1 class="topictitle">Related Topics</h1>
+    </div>
+
+    <div class="topic1">
+        <div class="topic1l"><img src="morning-habit.png" alt="morning-habit"></div>
+        <div class="topic1r"> <a href="morning-habits-to-become-productive.html">Morning Habits that makes you productive</a> </div>
+    </div>
+    <div class="topic1">
+        <div class="topic1l"> <img src="sunrise.cms" alt="sunrise"></div>
+        <div class="topic1r"><a href="Why_sunlight_required.html">Importance of sunlight for our body</a></div>
+    </div>
+    <div class="topic1">
+        <div class="topic1l"><img src="master-dark-psyc.jpeg" alt="master-dark-psyc"></div>
+        <div class="topic1r">6 trics to master dark psychology</div>
+    </div>
+    <div class="topic1">
+        <div class="topic1l"><img src="egg.webp" alt="egg"></div>
+        <div class="topic1r">How many eggs to eat in a day?</div>
+    </div>
+    <div class="topic1">
+        <div class="topic1l"><img src="https://images.unsplash.com/photo-1542353436-312f0e1f67ff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fGhhcHB5fGVufDB8fDB8fHww" alt=""></div>
+        <div class="topic1r"> <a href="how_to_be_discipline.html">How to be discipline?</a> </div>
+    </div>
+</div>
+</div>
+  
+
+<hr>
+<p style="color:rgb(235, 133, 133);margin-left:100px;" class="share"> Share on</p>
+<div class="socio">
+
+    <div class="socioplatform"> <img src="twitter.png" alt="social"> </div>
+    <div class="socioplatform"> <img src="instagram.png" alt="social"> </div>
+    <div class="socioplatform"> <img src="linkedin.png" alt="social"> </div>
+    <div class="socioplatform"> <img src="whatsapp.png" alt="social"> </div>
+
+    <div class="dailyquote">
+        <div class="dailyfloat" id="quoteContainer">
+        
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+
+<div class="disclaimer-container">
+    <i class="fa fa-info-circle"></i>
+    <div class="disclaimer-text">
+      <p class="desclai">Disclaimer: The content on this page may have been sourced from other websites and Google. While we strive to ensure accuracy, we cannot guarantee it. Opinions expressed are those of the authors and do not necessarily reflect our platform's official policy. Readers should verify information before use. We are not liable for any errors or damages resulting from the use of this information.</p>
+    </div>
+  </div>
+  
+  <br><br>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#" class="scroll-to-top"><span class=" material-symbols-outlined arrow" title="Move to top">arrow_upward</span></a>
+
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script>
+    window.addEventListener('scroll', function () {
+        const heading = document.getElementById('myHeading');
+        const underline = document.getElementById('underline');
+        const scrollPosition = window.scrollY;
+        const headingPosition = heading.offsetTop;
+        const distanceFromTop = headingPosition - scrollPosition;
+
+        if (distanceFromTop <= 600) {
+            heading.classList.add('underline-visible');
+        } else {
+            heading.classList.remove('underline-visible');
+        }
+
+        if (scrollPosition <= headingPosition) {
+            heading.classList.remove('underline-visible');
+        }
+    });
+
+
+</script>
+
+
+<script>
+
+window.addEventListener('scroll', function() {
+  var scrollPosition = window.pageYOffset;
+  var scrollButton = document.querySelector('.scroll-to-top');
+  
+  if (scrollPosition > 200) {
+    scrollButton.classList.add('show');
+  } else {
+    scrollButton.classList.remove('show');
+  }
+});
+
+document.querySelector('.scroll-to-top').addEventListener('click', function(event) {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+
+</script>
+
+
+
+
+
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.querySelector(".navbar-fixed-top").classList.add("show");
+            document.querySelector(".navbar-fixed-top").classList.remove("hidden");
+        } else {
+            document.querySelector(".navbar-fixed-top").classList.add("hidden");
+            document.querySelector(".navbar-fixed-top").classList.remove("show");
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>
+
+
+
+<script>
+    const wrapper = document.querySelector('.scroll-wrapper');
+    const cards = document.querySelector('.card-deck');
+    const scrollDistance = 300;
+
+    document.querySelector('.scroll-button.left').addEventListener('click', () => {
+        wrapper.scrollBy({
+            left: -scrollDistance,
+            behavior: 'smooth'
+        });
+    });
+
+    document.querySelector('.scroll-button.right').addEventListener('click', () => {
+        wrapper.scrollBy({
+            left: scrollDistance,
+            behavior: 'smooth'
+        });
+    });
+
+
+
+</script>
+
+<script>
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+        direction: "vertical",
+        gestureDirection: "vertical",
+        smooth: true,
+        smoothTouch: false,
+        touchMultiplier: 2,
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+
+</script>
+
+<script>
+    // Greet the user
+    const hours = new Date().getHours();
+    let greeting = "Hello";
+
+    if (hours >= 5 && hours < 12) {
+        greeting = "Good morning";
+    } else if (hours >= 12 && hours < 18) {
+        greeting = "Good afternoon";
+    } else {
+        greeting = "Good evening";
+    }
+
+    // Display the custom greeting inside the .greet div
+    const greetDiv = document.querySelector('.greet');
+    greetDiv.textContent = `${greeting} reader`;
+</script>
+
+
+
+<script>
+    const images = document.querySelectorAll('img');
+    const loader = document.getElementById('loader');
+
+    // Initialize a counter to track loaded images
+    let imageLoadCount = 0;
+
+    // Function to hide the loading animation
+    function hideLoader() {
+        loader.style.opacity = '0';
+        loader.style.transition = 'opacity 2s';
+        setTimeout(function () {
+            loader.style.display = 'none';
+        }, 1000);
+    }
+
+    // Function to track when an image is loaded
+    function imageLoaded() {
+        imageLoadCount++;
+        if (imageLoadCount === images.length) {
+            // All images have loaded, hide the loader
+            hideLoader();
+        }
+    }
+
+    // Loop through all images and attach the load event listener
+    images.forEach((image) => {
+        if (image.complete || (image.naturalWidth !== undefined && image.naturalWidth !== 0)) {
+            // If the image is already loaded, increment the count
+            imageLoaded();
+        } else {
+            // If the image is still loading, attach the load event listener
+            image.addEventListener('load', imageLoaded);
+            image.addEventListener('error', imageLoaded); // Handle image load errors
+        }
+    });
+</script>
+
+
+
+
+<script>
+    
+    async function fetchQuotes() {
+        const response = await fetch('quotes.json');
+        const data = await response.json();
+        return data;
+    }
+
+    
+    function getRandomQuote(quotes) {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        return quotes[randomIndex];
+    }
+
+   
+    function displayRandomQuote() {
+        const quoteContainer = document.getElementById('quoteContainer');
+        fetchQuotes()
+            .then(quotes => {
+                const randomQuote = getRandomQuote(quotes);
+                quoteContainer.innerHTML = `"${randomQuote.quote}" - ${randomQuote.author}`;
+            })
+            .catch(error => console.error('Error fetching quotes:', error));
+    }
+
+    displayRandomQuote();
+</script>
+
+
+</body>
+<footer>
+    <div class="footer-content">
+        <p class="copy">Copyright &copy; 2023. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+</footer>
+
+</html>
